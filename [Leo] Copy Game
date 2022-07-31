@@ -1,0 +1,35 @@
+--[[
+	Get key: Ask Leo Cheng SC
+
+	My alt account: scripttest_acct
+
+	Read me: Inject first, then execute (your game will freeze for a wile)
+	after execute leave game (or not) and go to your executor's
+	workspace (file) and you will see a Roblox Place (.rtxl) file
+	(or Roblox studio icon) click it. And.........Done!
+]]--
+local CopyKey = (Key) --enter Key between ( and ) e.g. local CopyKey = (Your Key)
+local player = game.Players.LocalPlayer
+--Press F9 to veiw info
+if CopyKey == (Key) then
+	print("Correct Key")
+	print("Please wait,", player)
+    wait(0.5)
+	game:GetService("StarterGui"):SetCore("ResetButtonCallback", false)
+	game:GetService("RunService").RenderStepped:Wait()
+	game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = 0
+	game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = 0
+	print("Do not move or reset")
+	print("Saving Copy")
+	saveinstance()
+	wait(1)
+	game.Players.LocalPlayer:Kick("Game should copyed to your workspace!")
+	wait(5)
+	game.Players.LocalPlayer:Kick("Please retry if it is not working")
+	wait(2)
+	--game:GetService("Players").LocalPlayer:Kick("The game should alrady copyed to your workspace. Retry if it is not working")
+	else
+	game.Players.LocalPlayer:Kick("!Wrong key!")
+	wait(5)
+	game.Players.LocalPlayer:Kick("Check your key or ask Leo for a new key")
+	end
